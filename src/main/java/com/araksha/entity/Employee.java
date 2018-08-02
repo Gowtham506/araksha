@@ -6,8 +6,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "emp_details")
 public class Employee {
 
-	 @Id
-	 private long id;
 	 private String empId;
 	 private String empName;
 	 private Integer mobileNumber;
@@ -15,12 +13,7 @@ public class Employee {
 	 private Boolean isActive;
 	 private String dateRegistered;
 	 
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
+	
 	public String getEmpId() {
 		return empId;
 	}
@@ -62,9 +55,8 @@ public class Employee {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Employee [id=");
-		builder.append(id);
-		builder.append(", empId=");
+		builder.append("Employee [");
+		builder.append(" empId=");
 		builder.append(empId);
 		builder.append(", empName=");
 		builder.append(empName);
